@@ -1,10 +1,9 @@
-<!DOCTYPE html>
 <html>
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;0,800;0,900;1,700&display=swap"
     rel="stylesheet">
-    
-    <style>
+<script src=/"/converted.js"></script>
+<style>
       
 html {
     box-sizing: border-box;
@@ -93,42 +92,63 @@ div#result {
 
 <body>
     
+   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;0,800;0,900;1,700&display=swap"
+    rel="stylesheet">
+    
+    
   <div id="bmrcalc">
 
-
-    <form name="myForm" onSubmit="return calculate()">
+  <form name="myForm" onSubmit="return calculate()">
       <h2>BMR Calculator</h2>
 
-      <div class="inputwrap">
+  <div class="inputwrap">
         <label class="label">Age</label>
         <input type="text" name="age" class="">
       </div>
 
-      <div class="inputwrap">
+  <div class="inputwrap">
         <label class="label">Gender</label>
         <label><input type="radio" name="gender" value="1">Male</label>
         <label><input type="radio" name="gender" value="2">Female</label>
       </div>
 
+  <div class="inputwrap">
+        <label class="label">Height</label>
+        <table>
+        <tr>
+        
+  <td>
       <div class="inputwrap">
-        <label class="label">Height (cm)</label>
-        <input type="text" name="height">
+        <label class="label">Feet</label>
+        <input type="text" name="heightft">
+      </div>
+      </td>
+      
+  <td>
+            <div class="inputwrap">
+        <label class="label">Inches</label>
+        <input type="text" name="heightin">
+      </div>
+      </td>
+      
+  </tr>
+      </table>
       </div>
 
-      <div class="inputwrap">
-        <label class="label">Weight (kg)</label>
+   <div class="inputwrap">
+        <label class="label">Weight (lb)</label>
         <input type="text" name="weight">
       </div>
 
-      <div class="inputwrap">
+   <div class="inputwrap">
         <input type="submit" value="Calculate">
       </div>
 
-      <div id="result">
+   <div id="result">
       </div>
 
 
-    </form>
+   </form>
 
   </div>
 </body>
