@@ -92,7 +92,7 @@ div#result {
 
 
 <body>
-    
+    <script>src="index.js"
    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;0,800;0,900;1,700&display=swap"
     rel="stylesheet">
     
