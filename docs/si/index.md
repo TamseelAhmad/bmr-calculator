@@ -4,7 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;0,800;0,900;1,700&display=swap"
     rel="stylesheet">
     
-    <style>
+   <style>
       
 html {
     box-sizing: border-box;
@@ -92,42 +92,64 @@ div#result {
 
 
 <body>
+  <script>
+     function calculate() {
+      var age = document.forms["myForm"]["age"].value;
+      var gender = document.forms["myForm"]["gender"].value;
+      var height = document.forms["myForm"]["height"].value;
+      var weight = document.forms["myForm"]["weight"].value;
+      var bmr = 0;
+      if (age == '' || gender == '' || height == '' || weight == '') {
+        alert("All fields are required");
+        return false;
+      }
+
+      if (gender == 1) {
+        bmr = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age);
+      } else {
+        bmr = 655.1 + (9.563 * weight) + (1.85 * height) - (4.676 * age);
+      }
+
+      document.getElementById("result").innerHTML = 'Your BMR: ' + bmr.toFixed(2) + 'kCal/Day';
+      document.getElementById("result").style.display = "block";
+
+      return false;
+
+    }
+
+  </script>
     
   <div id="bmrcalc">
 
 
-    <form name="myForm" onSubmit="return calculate()">
+   <form name="myForm" onSubmit="return calculate()">
       <h2>BMR Calculator</h2>
 
-      <div class="inputwrap">
+   <div class="inputwrap">
         <label class="label">Age</label>
         <input type="text" name="age" class="">
       </div>
 
-      <div class="inputwrap">
+  <div class="inputwrap">
         <label class="label">Gender</label>
         <label><input type="radio" name="gender" value="1">Male</label>
         <label><input type="radio" name="gender" value="2">Female</label>
       </div>
 
-      <div class="inputwrap">
+   <div class="inputwrap">
         <label class="label">Height (cm)</label>
         <input type="text" name="height">
       </div>
 
-      <div class="inputwrap">
+   <div class="inputwrap">
         <label class="label">Weight (kg)</label>
         <input type="text" name="weight">
       </div>
-
       <div class="inputwrap">
         <input type="submit" value="Calculate">
       </div>
-
       <div id="result">
       </div>
-
-
     </form>
 
   </div>
