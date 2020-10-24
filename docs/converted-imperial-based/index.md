@@ -6,7 +6,7 @@
         
   html {
       box-sizing: border-box;
-      margin: auto;
+      
   }
 
   *, *:before, *:after {
@@ -14,7 +14,7 @@
   }
   body {
       padding: 0px;
-      margin: 0px;
+      margin: auto;
       background: #F4F1F1;
       font-family: 'Nunito Sans', sans-serif;
   }
