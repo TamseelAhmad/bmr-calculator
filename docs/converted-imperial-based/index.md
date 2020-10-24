@@ -6,6 +6,7 @@
         
   html {
       box-sizing: border-box;
+      margin: auto;
   }
 
   *, *:before, *:after {
@@ -84,6 +85,10 @@
       display: none;
   }
 
+  table, th, td {
+      border: none;
+  }
+
 </style>
 
 </head>
@@ -123,7 +128,7 @@
   <div id="bmrcalc">
 
   <form name="myForm" onSubmit="return calculate()">
-      <h2>BMR Calculatar</h2>
+      <h2>BMR Calculator</h2>
 
   <div class="inputwrap">
         <label class="label">Age</label>
